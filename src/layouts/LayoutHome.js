@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from 'antd';
 import styled from 'styled-components';
 
-import Navbar from '../components/Navbar';
+import Navbar from '../components/common/Navbar';
 
 const LayoutHome = ({ children }) => {
 

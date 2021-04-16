@@ -2,8 +2,8 @@ import { Row } from 'antd';
 import LayoutHome from '../layouts/LayoutHome';
 
 // component page
-import DokumenArsip from '../components/Home/DokumenArsip';
-import StatusLibrary from '../components/Home/StatusLibrary';
+import DokumenArsip from '../components/pages/Home/DokumenArsip';
+import StatusLibrary from '../components/pages/Home/StatusLibrary';
 
 const Home = () => {
 
