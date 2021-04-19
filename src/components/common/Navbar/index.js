@@ -1,17 +1,7 @@
 import React from 'react';
-import { Button, Space } from 'antd';
+import { Button, Image, Space } from 'antd';
 import { NavLink } from 'react-router-dom';
-import { Header, ListMenu, HeaderText } from './style';
-
-const styles = {
-  link: {
-    color: "black"
-  },
-  linkActive: {
-    color: "#00529C",
-    fontWeight: "bold"
-  }
-}
+import { Header, ListMenu, HeaderText, styles } from './style';
 
 // Component
 const Navbar = ({ title, backgroundColor, textColor }) => {
@@ -21,7 +11,11 @@ const Navbar = ({ title, backgroundColor, textColor }) => {
     <>
       <Header backgroundColor={backgroundColor} textColor={textColor}>
         <HeaderText>
-          {title ? title : "Title"}
+          <Image
+            height={"40"}
+            preview={false}
+            src={require("../../../assets/img/BANK_BRI_logo.svg").default}
+          />
         </HeaderText>
         <Space size={"small"}>
           <ListMenu>
@@ -32,7 +26,7 @@ const Navbar = ({ title, backgroundColor, textColor }) => {
               to={"/"}
             >
               Home
-              </NavLink>
+            </NavLink>
           </ListMenu>
           <ListMenu>
             <NavLink
@@ -42,7 +36,7 @@ const Navbar = ({ title, backgroundColor, textColor }) => {
               to={"/course"}
             >
               Course
-              </NavLink>
+            </NavLink>
           </ListMenu>
           <ListMenu>
             <NavLink
@@ -52,9 +46,9 @@ const Navbar = ({ title, backgroundColor, textColor }) => {
               to={"/blog"}
             >
               Blog
-              </NavLink>
+            </NavLink>
           </ListMenu>
-          <NavLink to={"/login"} style={{ marginLeft: 20 }}>
+          <NavLink to={"/user/login"} style={{ marginLeft: 20 }}>
             <Button type={"primary"} shape={"round"}>Sign In</Button>
           </NavLink>
         </Space>

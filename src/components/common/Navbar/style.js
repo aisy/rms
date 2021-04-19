@@ -27,8 +27,20 @@ const ListMenu = styled.li`
   font-weight: 500;
 `;
 
+const styles = {
+  link: {
+    color: "black",
+    textTransform: "uppercase"
+  },
+  linkActive: {
+    color: "#00529C",
+    fontWeight: "bold"
+  }
+}
+
 export {
   Header,
   HeaderText,
-  ListMenu
+  ListMenu,
+  styles
 }
